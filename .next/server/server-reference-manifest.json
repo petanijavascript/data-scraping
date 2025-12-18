@@ -1,0 +1,21 @@
+{
+  "node": {
+    "40fba08d9dc725e1682ec6e0eee5dbf342c6327a9e": {
+      "workers": {
+        "app/page": {
+          "moduleId": "[project]/.next-internal/server/app/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "classifyProfileAction",
+          "filename": "src/app/actions.ts"
+        }
+      },
+      "layer": {
+        "app/page": "action-browser"
+      },
+      "filename": "src/app/actions.ts",
+      "exportedName": "classifyProfileAction"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "RiqBCiXB5ReSl9ULeFtRFGOlkJ+f9wuXxSxea5twDQU="
+}

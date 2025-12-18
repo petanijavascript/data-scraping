@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "profile-1",
+      "description": "Lifestyle influencer",
+      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjU3NzUyMDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "profile-2",
+      "description": "Tech reviewer",
+      "imageUrl": "https://images.unsplash.com/photo-1636377985931-898218afd306?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjU3Mzc3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "profile-3",
+      "description": "Beauty guru",
+      "imageUrl": "https://images.unsplash.com/photo-1678694919908-422ec6cac95d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMG1ha2V1cHxlbnwwfHx8fDE3NjU3OTkyMDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman makeup"
+    },
+    {
+      "id": "profile-4",
+      "description": "Food blogger",
+      "imageUrl": "https://images.unsplash.com/photo-1527034010651-8dcf514bd147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBjb29raW5nfGVufDB8fHx8MTc2NTc5NDQ4Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man cooking"
+    },
+    {
+      "id": "profile-5",
+      "description": "Fitness coach",
+      "imageUrl": "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMGZpdG5lc3N8ZW58MHx8fHwxNzY1NzUxMDI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman fitness"
+    }
+  ]
+}

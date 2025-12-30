@@ -31,7 +31,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # component libraries
-/./components/ui/
+/components/ui
+
+# public
+/public
 
 # env files (can opt-in for committing if needed)
 .env*

@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model social_media {
+  id         Int                @id @default(autoincrement())
+  name       String             @db.VarChar(199)
+  created_at DateTime           @default(now())
+  updated_at DateTime           @updatedAt
+
+  initial_profiles initial_profiles[]
+
+  @@map("social_media")
+}
+
+model initial_profiles {
+  id                String      @id @default(uuid()) @db.Uuid
+  social_media_id   Int
+  username          String      @db.VarChar(199)
+  full_name         String?     @db.VarChar(199)
+  biography         String?
+  phone             String?     @db.VarChar(199)
+  email             String?     @db.VarChar(199)
+  website           String?     @db.VarChar(199)
+  brands            String?     @db.VarChar(199)
+  category          String?
+  followers_count   Int?
+  engagement_rate   Decimal?    @db.Decimal(5,2)
+  is_verified       Int
+  verification_type String?
+  trust_score       Int?
+  last_verified_at  DateTime?
+  last_checked_at   DateTime?
+  created_at        DateTime    @default(now())
+  updated_at        DateTime    @updatedAt
+
+  social_media social_media @relation( fields: [social_media_id], references: [id], onDelete: Restrict)
+
+  verification_logs verification_logs[]
+
+  @@unique([social_media_id, username])
+  @@index([social_media_id, category, is_verified])
+  @@map("initial_profiles")
+}
+
+model verification_logs {
+  id                   String   @id @default(uuid()) @db.Uuid
+  initial_profiles_id  String   @db.Uuid
+  verification_status  Int
+  created_at           DateTime    @default(now())
+  updated_at           DateTime    @updatedAt
+  
+  initial_profile initial_profiles @relation(fields: [initial_profiles_id], references: [id], onDelete: Restrict)
+
+  @@index([initial_profiles_id])
+  @@map("verification_logs")
+}

@@ -8,17 +8,12 @@ const ProfilesPage = async () => {
     select: {
       id: true,
       username: true,
-<<<<<<< HEAD
-      email: true,
-      biography: true,
-=======
       biography: true,
       phone: true,
       email: true,
       website: true,
       category: true,
       brands: true,
->>>>>>> data-scraping-dev
       is_verified: true,
       followers_count: true,
       social_media: {

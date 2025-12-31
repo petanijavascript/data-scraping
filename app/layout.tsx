@@ -2,14 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-<<<<<<< HEAD
-import { AppSidebar } from "@/components/deck/app-sidebar";
-=======
 import AppSidebar from "@/components/deck/package/AppSidebar";
 import Navbar from "@/components/deck/package/Navbar";
 import { ThemeProvider } from "@/components/deck/providers/ThemeProvider";
 import { cookies } from "next/headers";
->>>>>>> data-scraping-dev
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,15 +36,6 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex`}
       >
-<<<<<<< HEAD
-         <SidebarProvider>
-          <AppSidebar />
-          <main>
-            <SidebarTrigger />
-            {children}
-          </main>
-        </SidebarProvider>
-=======
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -63,7 +50,6 @@ export default async function RootLayout({
             </main>
           </SidebarProvider>
         </ThemeProvider>
->>>>>>> data-scraping-dev
       </body>
     </html>
   );

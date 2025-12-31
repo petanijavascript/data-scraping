@@ -45,11 +45,7 @@ import {
 const items = [
   {
     title: "Home",
-<<<<<<< HEAD
-    url: "/",
-=======
     url: "../dashboard",
->>>>>>> data-scraping-dev
     icon: Home,
   },
   {
@@ -57,18 +53,6 @@ const items = [
     url: "#",
     icon: Inbox,
   },
-<<<<<<< HEAD
-  {
-    title: "Calendar",
-    url: "#",
-    icon: Calendar,
-  },
-  {
-    title: "Search",
-    url: "#",
-    icon: Search,
-  },
-=======
   // {
   //   title: "Calendar",
   //   url: "#",
@@ -79,7 +63,6 @@ const items = [
   //   url: "#",
   //   icon: Search,
   // },
->>>>>>> data-scraping-dev
   {
     title: "Settings",
     url: "#",
@@ -95,13 +78,8 @@ const AppSidebar = () => {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/">
-<<<<<<< HEAD
-                <Image src="/logo.svg" alt="logo" width={20} height={20} />
-                <span>Lama Dev</span>
-=======
                 <Image src="/images/logo_circle.png" alt="logo" width={20} height={20} />
                 <span>Instagram & TikTok Scraper</span>
->>>>>>> data-scraping-dev
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -129,11 +107,7 @@ const AppSidebar = () => {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-<<<<<<< HEAD
-        <SidebarGroup>
-=======
         {/* <SidebarGroup>
->>>>>>> data-scraping-dev
           <SidebarGroupLabel>Projects</SidebarGroupLabel>
           <SidebarGroupAction>
             <Plus /> <span className="sr-only">Add Project</span>
@@ -158,15 +132,9 @@ const AppSidebar = () => {
               </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
-<<<<<<< HEAD
-        </SidebarGroup>
-        {/* COLLAPSABLE */}
-        <Collapsible defaultOpen className="group/collapsible">
-=======
         </SidebarGroup> */}
         {/* COLLAPSABLE */}
         {/* <Collapsible defaultOpen className="group/collapsible">
->>>>>>> data-scraping-dev
           <SidebarGroup>
             <SidebarGroupLabel asChild>
               <CollapsibleTrigger>
@@ -197,52 +165,30 @@ const AppSidebar = () => {
               </SidebarGroupContent>
             </CollapsibleContent>
           </SidebarGroup>
-<<<<<<< HEAD
-        </Collapsible>
-        {/* NESTED */}
-        <SidebarGroup>
-          <SidebarGroupLabel>Nested Items</SidebarGroupLabel>
-=======
         </Collapsible> */}
         {/* NESTED */}
         <SidebarGroup>
           <SidebarGroupLabel>Data Analytics</SidebarGroupLabel>
->>>>>>> data-scraping-dev
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
                 <SidebarMenuButton asChild>
                   <Link href="/#">
                     <Projector />
-<<<<<<< HEAD
-                    See All Projects
-=======
                     Tables
->>>>>>> data-scraping-dev
                   </Link>
                 </SidebarMenuButton>
                 <SidebarMenuSub>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-<<<<<<< HEAD
-                      <Link href="/#">
-                        <Plus />
-                        Add Project
-=======
                       <Link href="../tables/socialmedia">
                         <Plus />
                         Social Media
->>>>>>> data-scraping-dev
                       </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>
                   <SidebarMenuSubItem>
                     <SidebarMenuSubButton asChild>
-<<<<<<< HEAD
-                      <Link href="/#">
-                        <Plus />
-                        Add Category
-=======
                       <Link href="../tables/profiles">
                         <Plus />
                         Profiles
@@ -254,7 +200,6 @@ const AppSidebar = () => {
                       <Link href="../tables/verification">
                         <Plus />
                         Verification Logs
->>>>>>> data-scraping-dev
                       </Link>
                     </SidebarMenuSubButton>
                   </SidebarMenuSubItem>

@@ -4,9 +4,6 @@ import prisma from "@/lib/db";
 
 const VerificationPage = async () => {
   // const data = await getProfile();
-<<<<<<< HEAD
-  const data = await prisma.verification_logs.findMany();
-=======
   const data = await prisma.verification_logs.findMany({
     select: {
       id: true,
@@ -26,7 +23,6 @@ const VerificationPage = async () => {
       created_at: "desc",
     },
   });
->>>>>>> data-scraping-dev
   return (
     <div className="">
       <div className="mb-8 px-4 py-2 bg-secondary rounded-md">

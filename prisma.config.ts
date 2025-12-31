@@ -10,6 +10,10 @@ export default defineConfig({
   },
   datasource: {
     url: env("DATABASE_URL"),
+<<<<<<< HEAD
     // shadowDatabaseUrl: env("SHADOW_DATABASE_URL"),
+=======
+    shadowDatabaseUrl: env("DIRECT_URL"),
+>>>>>>> data-scraping-dev
   },
 });

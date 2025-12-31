@@ -31,8 +31,17 @@ export type Profile = {
   id: string;
   social_media: SocialMedia;
   username: string;
+<<<<<<< HEAD
   email: string | null;
   biography: string | null;
+=======
+  biography: string | null;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+  category: string | null;
+  brands: string | null;
+>>>>>>> data-scraping-dev
   is_verified: number;
   followers_count: number | null;
 };
@@ -84,6 +93,17 @@ export const columns: ColumnDef<Profile>[] = [
     },
   },
   {
+<<<<<<< HEAD
+=======
+    accessorKey: "biography",
+    header: "Biography",
+  },
+  {
+    accessorKey: "phone",
+    header: "Phone",
+  },
+  {
+>>>>>>> data-scraping-dev
     accessorKey: "email",
     header: ({ column }) => {
       return (
@@ -98,11 +118,26 @@ export const columns: ColumnDef<Profile>[] = [
     },
   },
   {
+<<<<<<< HEAD
     accessorKey: "biography",
     header: "Biography",
   },
   {
     id: "verified_badge",
+=======
+    accessorKey: "website",
+    header: "Website",
+  },
+  {
+    accessorKey: "category",
+    header: "Category",
+  },
+  {
+    accessorKey: "brands",
+    header: "Brands",
+  },
+  {
+>>>>>>> data-scraping-dev
     accessorKey: "is_verified",
     header: ({ column }) => {
       return (
@@ -110,13 +145,21 @@ export const columns: ColumnDef<Profile>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
+<<<<<<< HEAD
           Vefirified Badge
+=======
+          Status
+>>>>>>> data-scraping-dev
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
     cell: ({ row }) => {
+<<<<<<< HEAD
       const status = row.getValue("is_verified") as number | null;
+=======
+      const status = row.getValue("is_verified") as number;
+>>>>>>> data-scraping-dev
 
       return (
         <div
@@ -126,7 +169,11 @@ export const columns: ColumnDef<Profile>[] = [
             status === 1 && "bg-green-500/40"
           )}
         >
+<<<<<<< HEAD
           {status?.toString() || "N/A"}
+=======
+          {status === 0 ? "Not Verified" : "Verified"}
+>>>>>>> data-scraping-dev
         </div>
       );
     },
@@ -165,7 +212,10 @@ export const columns: ColumnDef<Profile>[] = [
               Copy profile ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
+<<<<<<< HEAD
             <DropdownMenuItem>View customer</DropdownMenuItem>
+=======
+>>>>>>> data-scraping-dev
             <DropdownMenuItem>View profile details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

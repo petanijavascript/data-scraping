@@ -44,9 +44,15 @@ const Navbar = () => {
             <DropdownMenuItem onClick={() => setTheme("dark")}>
               Dark
             </DropdownMenuItem>
+<<<<<<< HEAD
             <DropdownMenuItem onClick={() => setTheme("system")}>
               System
             </DropdownMenuItem>
+=======
+            {/* <DropdownMenuItem onClick={() => setTheme("system")}>
+              System
+            </DropdownMenuItem> */}
+>>>>>>> data-scraping-dev
           </DropdownMenuContent>
         </DropdownMenu>
         {/* USER MENU */}

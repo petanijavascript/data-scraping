@@ -61,7 +61,11 @@ model verification_logs {
   created_at           DateTime    @default(now())
   updated_at           DateTime    @updatedAt
   
+<<<<<<< HEAD
   initial_profile initial_profiles @relation(fields: [initial_profiles_id], references: [id], onDelete: Restrict)
+=======
+  initial_profiles initial_profiles @relation(fields: [initial_profiles_id], references: [id], onDelete: Restrict)
+>>>>>>> data-scraping-dev
 
   @@index([initial_profiles_id])
   @@map("verification_logs")

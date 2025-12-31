@@ -31,8 +31,12 @@ export type Profile = {
   id: string;
   social_media: SocialMedia;
   username: string;
-  email: string | null;
   biography: string | null;
+  phone: string | null;
+  email: string | null;
+  website: string | null;
+  category: string | null;
+  brands: string | null;
   is_verified: number;
   followers_count: number | null;
 };
@@ -84,6 +88,14 @@ export const columns: ColumnDef<Profile>[] = [
     },
   },
   {
+    accessorKey: "biography",
+    header: "Biography",
+  },
+  {
+    accessorKey: "phone",
+    header: "Phone",
+  },
+  {
     accessorKey: "email",
     header: ({ column }) => {
       return (
@@ -98,11 +110,18 @@ export const columns: ColumnDef<Profile>[] = [
     },
   },
   {
-    accessorKey: "biography",
-    header: "Biography",
+    accessorKey: "website",
+    header: "Website",
   },
   {
-    id: "verified_badge",
+    accessorKey: "category",
+    header: "Category",
+  },
+  {
+    accessorKey: "brands",
+    header: "Brands",
+  },
+  {
     accessorKey: "is_verified",
     header: ({ column }) => {
       return (
@@ -110,13 +129,13 @@ export const columns: ColumnDef<Profile>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Vefirified Badge
+          Status
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
     cell: ({ row }) => {
-      const status = row.getValue("is_verified") as number | null;
+      const status = row.getValue("is_verified") as number;
 
       return (
         <div
@@ -126,7 +145,7 @@ export const columns: ColumnDef<Profile>[] = [
             status === 1 && "bg-green-500/40"
           )}
         >
-          {status?.toString() || "N/A"}
+          {status === 0 ? "Not Verified" : "Verified"}
         </div>
       );
     },
@@ -165,7 +184,6 @@ export const columns: ColumnDef<Profile>[] = [
               Copy profile ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View customer</DropdownMenuItem>
             <DropdownMenuItem>View profile details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

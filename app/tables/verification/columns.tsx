@@ -22,9 +22,17 @@ import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 //   status: "pending" | "processing" | "success" | "failed";
 // };
 
+export type InitialProfiles = {
+   id: string;
+   username: string;
+   email: string | null;
+   biography: string | null;
+   is_verified: number;
+};
+
 export type Verification = {
   id: string;
-  initial_profiles_id: string;
+  initial_profiles: InitialProfiles;
   verification_status: number | null;
   created_at: Date;
 };
@@ -49,12 +57,27 @@ export const columns: ColumnDef<Verification>[] = [
     ),
   },
   {
-    accessorKey: "username",
-    header: "User",
+    accessorKey: "initial_profiles",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          User
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      );
+    },
+    cell: ({ row }) => {
+      const profile = row.getValue("initial_profiles") as InitialProfiles;
+
+      return (profile?.username || "N/A");
+    },
   },
   {
     accessorKey: "verification_status",
-    header: "Status",
+    header: "Badge",
     cell: ({ row }) => {
       const status = row.getValue("verification_status") as number | null;
 
@@ -66,7 +89,7 @@ export const columns: ColumnDef<Verification>[] = [
             status === 1 && "bg-green-500/40"
           )}
         >
-          {status?.toString() || "N/A"}
+          {status === 0 ? "Not Verified" : "Blue Tick"}
         </div>
       );
     },

@@ -8,8 +8,12 @@ const ProfilesPage = async () => {
     select: {
       id: true,
       username: true,
-      email: true,
       biography: true,
+      phone: true,
+      email: true,
+      website: true,
+      category: true,
+      brands: true,
       is_verified: true,
       followers_count: true,
       social_media: {

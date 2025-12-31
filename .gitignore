@@ -31,7 +31,7 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # component libraries
-/components/ui
+# /components/ui
 
 # public
 /public
@@ -47,4 +47,4 @@ yarn-error.log*
 next-env.d.ts
 
 # prisma
-/lib/generated/prisma
+# /lib/generated/prisma
